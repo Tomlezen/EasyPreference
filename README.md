@@ -1,0 +1,1 @@
+# 通过注解来生成SharePreferences的值的get与put方法
