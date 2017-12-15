@@ -10,10 +10,33 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.novoda:bintray-release:0.5.0"
+    }
+    tasks.withType(Javadoc) {
+        failOnError false
+        options{
+            encoding "UTF-8"
+            charSet 'UTF-8'
+            links "http://docs.oracle.com/javase/7/docs/api"
+        }
     }
 }
 
 allprojects {
+    ext{
+        repoName = "util"
+        groupId = "com.tlz.easypreference"
+        artifactId = "easypreference"
+        artifactCompilerId = "easypreference-processor"
+        uploadName = "easypreference"
+        packaging = "aar"
+        desc = ""
+        website = "https://github.com/Tomlezen/EasyPreference"
+        gitUrl = "https://github.com/Tomlezen/EasyPreference"
+        publishVersion = "0.0.1"
+        autoPublish = true
+    }
+
     repositories {
         google()
         jcenter()
