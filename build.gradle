@@ -29,6 +29,7 @@ allprojects {
         artifactId = "easypreference"
         artifactCompilerId = "easypreference-processor"
         uploadName = "easypreference"
+        uploadCompilerName = "easypreference-processor"
         packaging = "aar"
         desc = ""
         website = "https://github.com/Tomlezen/EasyPreference"

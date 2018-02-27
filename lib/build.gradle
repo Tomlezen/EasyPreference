@@ -6,8 +6,8 @@ dependencies {
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 }
 
-sourceCompatibility = "1.7"
-targetCompatibility = "1.7"
+sourceCompatibility = "1.6"
+targetCompatibility = "1.6"
 
 publish {
     artifactId = parent.ext.artifactId
