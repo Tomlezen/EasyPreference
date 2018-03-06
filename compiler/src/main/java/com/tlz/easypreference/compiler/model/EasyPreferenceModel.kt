@@ -17,7 +17,7 @@ class EasyPreferenceModel(type: TypeElement, elementUtils: Elements) {
 
   val keys = mutableListOf<VariableElement>()
   val pkg = "${EasyPreference::class.java.`package`.name}.prefs"//type.pkg(elementUtils)
-  val originalClassName = type.qualifiedName.toString().substring(pkg.length + 1).replace(".", "")
+  val originalClassName = type.qualifiedName.toString().split(".").last()
   val name = type.getAnnotation(EasyPreference::class.java).name
   val model = type.getAnnotation(EasyPreference::class.java).model
   val className = "${originalClassName}Utils"
